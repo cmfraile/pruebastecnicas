@@ -1,0 +1,17 @@
+console.clear();
+
+//Dado un número, mostrar una cadena con los numero del 0 a x, pero mostrando fizz en los múltiplos de 3, buzz en los numeros de 5 y fizzbuzz en multiplos de ambos:
+
+const main = (valor:number) => {
+    let resultado:string = "";
+    for(let i = 1 ; i <= valor ; i++){
+        if(i%3 == 0 && i%5 == 0){resultado += "fizzbuzz,"}else{
+            if(i%3 == 0){resultado += "fizz," ; continue};
+            if(i%5 == 0){resultado += "buzz," ; continue};
+            resultado += `${i},`;
+        }
+    }
+    console.log(resultado);
+}
+
+main(30);

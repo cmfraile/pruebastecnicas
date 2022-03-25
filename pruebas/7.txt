@@ -1,0 +1,11 @@
+console.clear();
+
+//Dado dos números, devolver cuantos impares hay en el periodo entre ellos.
+
+const main = (x:number,y:number) => {
+    let contador:number = 0;
+    for(let i = x + 1 ; i <= y - 1 ; i++){if(i%2 == 1){contador++}};
+    console.log(`Hay ${contador} impares entre ${x} y ${y}`)
+}
+
+main(1,10);

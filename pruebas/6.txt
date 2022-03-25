@@ -1,0 +1,25 @@
+console.clear();
+
+//Dibujar un cuadrado hecho con un lado de longitud x:
+
+const main = (x:number) => {
+
+    let supinf = "";
+    for(let i = 1 ; i <= x ; i++){supinf = supinf + "*"};
+
+    let mid = "";
+    for(let i = 1 ; i <= x ; i++){
+        if(i == 1 || i == x - 1){mid = mid + "*"};
+        if(i !== 1 || i !== x ){mid = mid + " "};
+    }
+
+    let cadena:string = "";
+    for(let i = 1 ; i <= x ; i++){
+        if(i == 1 || i == x){cadena = cadena + supinf}else{cadena = cadena + mid};
+        cadena = cadena + "\n";
+    }
+
+    console.log(cadena);
+}
+
+main(4);

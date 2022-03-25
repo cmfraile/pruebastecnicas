@@ -1,0 +1,14 @@
+console.clear();
+
+//Dado un texto y una palabra, sustituir las coincidencias por un [-CENSURADO-];
+
+const main = (texto:string,censura:string) => {
+    
+    let textoarray = texto.split(' ');
+    textoarray.forEach((x:string,i:number) => {
+        if(censura.toLowerCase() == x.toLowerCase()){textoarray[i] = "[-CENSURADO-]"}
+    });
+    console.log(textoarray.join(' '));
+}
+
+main('El perro de san Roque','DE');

@@ -1,0 +1,26 @@
+console.clear();
+
+//Dado un array x y un número y, divide un array en tantos subarrays como los indicados en y:
+
+const main = (array:any[],division:number) => {
+    
+    let resultado:any[] = [];
+    let lonmax:number = Math.floor(array.length/division);
+    let vueltas:number = Math.ceil(array.length/division);
+    
+    if(array.length < division){console.log("La operacion no se puede realizar") ; return };
+
+    for(let i = 1 ; i <= vueltas ; i++){
+        let fabricar:any[] = [];
+        for(let y = 1 ; y <= lonmax; y++){
+            if(array[0] == undefined){continue};
+            fabricar.push(array.shift());
+        };
+        if(fabricar.length !== 0){resultado.push(fabricar)};
+    }
+
+    console.log(resultado);
+    
+}
+
+main([1,2,4,5,45,1,23],2);

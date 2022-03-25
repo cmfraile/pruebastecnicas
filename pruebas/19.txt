@@ -1,0 +1,21 @@
+console.clear();
+
+//Dado un array de objetos con {pelicula,director,vista:boolean}, generar un array con saltos de linea que separe las vistas de las pendientes.
+
+const main = (peliculas:{pelicula:string,director:string,vista:boolean}[]) => {
+    
+    let resultado:string = "Peliculas vistas:\n";
+    peliculas.sort((a,b) => {if(a.pelicula < b.pelicula){return -1}else{return 1}});
+
+    peliculas.forEach((x:any) => {if(x.vista){resultado+=`${x.pelicula}, de ${x.director}\n`}});
+    resultado+="\npeliculas pendientes:\n";
+    peliculas.forEach((x:any) => {if(!x.vista){resultado+=`${x.pelicula}, de ${x.director}\n`}});
+    console.log(resultado);
+
+};
+
+main([
+    {pelicula:'Los tipos malos',director:'Pierre Perifel',vista:true},
+    {pelicula:'El principe de egipto',director:'Brenda Chapman',vista:true},
+    {pelicula:'Bee Movie',director:'Simon J.Smith',vista:false}
+]);

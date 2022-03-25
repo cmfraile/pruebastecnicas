@@ -1,0 +1,12 @@
+console.clear();
+
+//Dado un número, devolver su tabla de multiplicar completa:
+
+const main = (valor:number) => {
+    for(let i = 1 ; i <= 10 ; i++){
+        console.log(`${valor} * ${i} = ${valor * i}`);
+    }
+}
+
+
+main(9);

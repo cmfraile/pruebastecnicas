@@ -1,0 +1,19 @@
+console.clear();
+
+//Dado un numero x, hacer una escalera con [x];
+
+const main = (x:number) => {
+    
+    let cadena:string = "";
+    let vacio:string = "   ";
+
+    for(let i = 1 ; i <= x ; i++){
+        let linea = "";
+        for(let y = 1 ; y <= x ; y++){if(y <= i){linea = linea + "[-]"}};
+        cadena = cadena + linea + "\n";
+    }
+
+    console.log(cadena);
+}
+
+main(10);

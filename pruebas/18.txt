@@ -1,0 +1,18 @@
+console.clear();
+
+//Dado un número, mostrar todos sus divisores:
+
+const main = (valor:number) => {
+    let divisores:number[] = [];
+    for(let i = 1 ; i <= valor ; i++){ if(valor%i == 0){divisores.push(i)} };
+    let resultado:string = `Los divisores de ${valor} son :`;
+    while(divisores.length !== 0){
+        if(divisores.length !== 1){resultado+=`${divisores.shift()}, `}else{
+            resultado = resultado.substring(0,resultado.length - 1);
+            resultado+=` y ${divisores.shift()}.`;
+        };
+    }
+    console.log(resultado);
+}
+
+main(45);

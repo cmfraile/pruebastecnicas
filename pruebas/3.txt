@@ -1,0 +1,15 @@
+console.clear();
+
+//Dada una frase y palabra introducidas como argumento, determinar cuantas veces aparece la palabra:
+
+const main = (frase:string , palabra:string) => {
+    const frase1 = frase.toUpperCase() ; const palabra1 = palabra.toUpperCase();
+    if(!frase1.includes(palabra1)){console.log('0 coincidencias') ; return};
+
+    let contador = 0;
+    frase1.split(' ').forEach((x:string) => { if(x == palabra1){contador++} });
+    console.log(`${contador} coincidencias`) ; return ;
+}
+
+
+main('El perro de San Roque perro PERRO','perro');

@@ -1,0 +1,21 @@
+console.clear();
+
+//Dada una cadena de texto, devolver la cadena mas usada:
+
+const main = (cadena:string) => {
+    let obj1:any = {};
+    cadena.split('').forEach((x:string) => {
+        if(x == ' ' || x == '.'){return}
+        if(obj1[x.toUpperCase()] == undefined){ obj1[x.toUpperCase()] = 1 }else{obj1[x.toUpperCase()]++}
+    });
+    let conclusion:string = ""; let valortop:number = 0;
+    Object.keys(obj1).forEach((x:string) => {
+        if(obj1[x] >= valortop){
+            valortop = obj1[x];
+            conclusion = `El caracter mas repetido en la cadena [ ${cadena.substring(0,25)}... ] es el caracter [ ${x} ] unas [ ${obj1[x]} ] veces`;
+        }
+    });
+    console.log(conclusion);
+}
+
+main('El perro de san roque no tiene rabo porque ramon ramirez se lo ha cortado.');

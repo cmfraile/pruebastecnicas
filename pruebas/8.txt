@@ -1,0 +1,9 @@
+console.clear();
+
+//Dado un entero, inviertelo y devuelvelo como entero:
+
+const main = (x:number) => {
+    console.log(parseInt(x.toString().split('').reverse().join('')));
+}
+
+main(10);

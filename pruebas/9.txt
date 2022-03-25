@@ -1,0 +1,14 @@
+console.clear();
+
+//Dado dos arrays, devolver los elementos comunes entre ellos.
+
+const main = (a1:any[],a2:any[]) => {
+    let coincidencias:any[] = [];
+    a1.forEach((x:any) => {
+        if(!a2.includes(x)){return};
+        coincidencias.push(x);
+    });
+    console.log(coincidencias);
+}
+
+main(['caca','culo','pedo','pis'],['caca',20,30,'pis']);

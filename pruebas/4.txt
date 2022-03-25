@@ -1,0 +1,12 @@
+console.clear();
+
+//Dado una cadena, invertirla sin usar métodos propios del lenguaje:
+
+const main = (cadena:string) => {
+    let invertida = "";
+    cadena.split('').forEach((x:string) => {invertida = x + invertida;});
+    console.log(invertida);
+}
+
+
+main('El perro de San Roque no tiene rabo');

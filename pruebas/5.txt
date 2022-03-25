@@ -1,0 +1,10 @@
+console.clear();
+
+//Dado una funcion con dos parámetros, devolver el y% de x:
+
+const main = (x:number,porcentaje:number) => {
+    console.log(`El ${porcentaje}% de ${x} es : ${x/100*porcentaje}`);
+}
+
+
+main(0.5,12);
