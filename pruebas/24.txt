@@ -1,0 +1,11 @@
+console.clear();
+
+//Dada un array de enteros y un número pasados como argumento, detectar si esa lista de números es una permutación del 1 al número aportado, es decir, que no falte ningun número entre el uno y ese número:
+
+const main = (permuta:number[],numero:number) => {
+    let cuenta:number = 1 ; let fallo:boolean = false;
+    for(let i = 1; i <= numero; i++){if(i !== permuta[i - 1]){fallo = !fallo ; break}else{cuenta++}}
+    console.log((fallo) ? "Permutacion invalida" : "Permutacion valida");
+};
+
+main([1,2,3,4,5],5);

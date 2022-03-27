@@ -1,0 +1,21 @@
+console.clear();
+
+//Dado un número de dias, calcular los años, meses y dias:
+
+const main = (numero:number) => {
+    const calculobj = {
+        anos : Math.floor(numero/365),
+        meses : Math.floor(numero/30)%12,
+        dias : numero%30,
+        calculo : () => {
+            let cadena:string = `${numero} días corresponde a: `;
+            if(calculobj.anos >= 1){cadena += `${calculobj.anos} años, `}
+            if(calculobj.meses >= 1){cadena += `${calculobj.meses} meses,`}
+            if(calculobj.dias >= 1){cadena += `${calculobj.dias} días.`};
+            console.log(cadena);
+        }
+    }
+    calculobj.calculo();
+};
+
+main(12000);

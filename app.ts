@@ -1,10 +1,14 @@
 console.clear();
 
-//Dados dos array, determinar si son anagramas (es decir, que usan los mismos caracteres y en la misma cantidad);
+//Dado un array de numeros y cadenas, devolver el array sin números duplicados ni cadenas:
 
-const main = (cadena1:string,cadena2:string) => {
-    const objs = {n1:cadena1.toUpperCase().match(/[AEIOU]/gi)?.sort().join(''),n2:cadena2.toUpperCase().match(/[AEIOU]/gi)?.sort().join('')}
-    if(objs.n1 == objs.n2){console.log("Son anagramas")}else{console.log("No son anagramas")};
+const main = (array:(number|string)[]) => {
+    let primerfiltro:any[] = array.filter( (x:any) => {if(typeof(x) == 'number'){return true}else{return false}});
+    primerfiltro.map((x) => {
+        
+        console.log(x,primerfiltro.join(','))
+    })
+    console.log(primerfiltro);
 };
 
-main('El perro de san roque no tiene rabo','El perro de san roque no tiene rabo');
+main([12,13,14,15,15,15,12,'webo']);

@@ -1,0 +1,15 @@
+console.clear();
+
+//Dado un string, ponerlo completo en mayúsculas o minusculas en función de la mayoria de carácteres de cada tipo
+
+const main = (cadena:string) => {
+    let mayusminus:boolean|undefined = undefined; let mayus:any = cadena.match(/[A-Z]/g)?.length || 0 ; let minus:any = cadena.match(/[a-z]/g)?.length || 0 ;
+    if(mayus > minus){mayusminus = true} ; if(mayus < minus){mayusminus = false} ;
+    if(typeof(mayusminus) == 'boolean'){
+        if(mayusminus){console.log(cadena.toUpperCase())}else{console.log(cadena.toLowerCase())}
+    }else{
+        console.log(cadena);
+    }
+};
+
+main('El perro de San Roque no tiene rabo AAAAAAAAAAAAAAAAAAAAAAAAAAAA');

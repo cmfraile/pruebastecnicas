@@ -1,0 +1,13 @@
+console.clear();
+
+//Dado un número, indicar si es capicúa o no, es decir, que se lea igual en su sentido normal e inverso:
+
+const main = (numero:number) => {
+    if(numero == parseInt(numero.toString().split('').reverse().join(''))){
+        console.log(`[${numero}] es capicúa`);
+    }else{
+        console.log(`[${numero}] no es capicúa`);
+    }
+};
+
+main(12);

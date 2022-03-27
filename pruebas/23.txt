@@ -1,0 +1,14 @@
+console.clear();
+
+//Dada una cadena de texto, poner en mayúscula la primera letra y luego devolver la cadena:
+
+const main = (cadena:string) => {
+    let nueva:string[] = [];
+    cadena.split(' ').forEach( (x:string,i:number) => {
+        nueva.push(`${x.substring(0,1).toUpperCase()}${x.substring(1)}`)
+    });
+    console.log(nueva.join(' '));
+
+};
+
+main('El perro de san roque no tiene rabo');

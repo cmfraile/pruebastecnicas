@@ -1,0 +1,13 @@
+console.clear();
+
+//Dado un número, obtener la serie de fibonacci, donde cada número es la suma de los dos anteriores:
+
+const main = (numero:number) => {
+    let sucesion:number[] = [0,1];
+    for(let i = 1 ; i < numero ; i++){
+        sucesion.push(sucesion[i - 1] + sucesion[i])
+    }
+    console.log(`Serie de ${numero}:`,sucesion)
+};
+
+main(10);
