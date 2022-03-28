@@ -1,0 +1,16 @@
+console.clear();
+
+//Dado un número, devolver un triángulo con ese número de filas:
+
+const main = (valor:number) => {
+    let cadena = "";
+    for(let w = 1 ; w <= valor ; w++){
+        let vacio = "" ; let estrellas = "" ;
+        for(let x = 1 ; x <= (w*2)-1 ; x++){estrellas+="*"}
+        for(let y = w ; y <= valor-1 ; y++){vacio+=" "}
+        cadena+=vacio+estrellas+vacio+"\n";
+    }
+    console.log(cadena)
+};
+
+main(10);

@@ -1,0 +1,9 @@
+console.clear();
+
+//Sacar un número aleatorio entre dos aportados al argumento
+
+const main = (min:number,max:number) => {
+    console.log(Math.round(Math.random() * (max-min) + min));
+};
+
+main(3,9);

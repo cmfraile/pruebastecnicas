@@ -1,24 +1,9 @@
 console.clear();
 
-//Dado un array o texto, devolver el elemento que mas aparece:
+//Dado un array de string, sacar los valores que estan formados por mas de dos palabras:
 
-const main = (elemento:string|any[]) => {
-    let top:any = "" ; let contador = 0;
-    switch(typeof(elemento)){
-        case 'string':
-            elemento.split(' ').forEach((x:string) => {
-                let casos = elemento.match(RegExp(x,'gi'))?.length || 0;
-                if( casos > contador){ top = x ; contador = casos}
-            });
-            console.log(`El término mas empleado en la cadena es [${top}], usado en [${contador}] ocasiones.`);
-        ;break;
-        default:
-            let cuenta:any = {}
-            elemento.forEach((x:any) => {if(!cuenta[x]){cuenta[x] = 1}else{cuenta[x]++}});
-            for(let x in cuenta){if(cuenta[x] > contador){top = x ; contador = cuenta[x];}}
-            console.log(`El dato mas empleado en el array es [${top}], usando en [${contador}] ocasiones.`);
-        ;break;
-    }
+const main = (valores:string[]) => {
+    console.log(valores.filter((x:string) => {if(x.split(' ').length !== 1){return true}else{return false}}));
 };
 
-main([12,12,12,12,'mamawebo']);
+main(['Córdoba','Badajoz','Ciudad Real','Barcelona','San Cougat']);
