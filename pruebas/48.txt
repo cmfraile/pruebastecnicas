@@ -1,0 +1,17 @@
+console.clear();
+
+//Dado un string, devolver las letras que aparecen solo una vez y cual es la primera letra que cumple esa condicion
+
+const main = (frase:string) => {
+    let procesando:string = frase;
+    procesando = procesando.split('').filter((x:string) => {
+        if(x == " " || x == "." || x == ","){return false};
+        return true
+    }).join('').toUpperCase();
+    let procesando2 = procesando.split('').filter((x:string) => {
+        if(procesando.match(RegExp(x,'gi'))?.length !== 1){return false}else{return true}
+    });
+    console.log([procesando2,procesando2[0]]);
+};
+
+main("Hola, hola, hay alguien ahi.");

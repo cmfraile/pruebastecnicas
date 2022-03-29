@@ -1,0 +1,18 @@
+console.clear();
+
+//Dado un objeto, comprobar si existe una propiedad introducida como argumento
+
+const main = (obj:Object,busqueda:string) => {
+    if(Object.keys(obj).includes(busqueda)){console.log(`La propiedad [${busqueda}], si existe en el objeto`)}else{console.log(`La propiedad [${busqueda}], no existe en el objeto`)};
+    console.log("Objeto en cuestión:",obj);
+};
+
+main(
+    
+    {
+        pelicula:'Los tipos malos',
+        director:'Pierre Perifel',
+        productora:'Dreamworks'
+    },
+    'directora'
+);

@@ -1,19 +1,11 @@
 "use strict";
 console.clear();
-//Dado un array de arrays con alumnos y notas, mostrar una lista con los alumnos aprobados y suspensos.
-const main = (alumnos) => {
-    let aprobados = "\nLista de aprobados:\n";
-    let suspensos = "\nLista de suspensos:\n";
-    alumnos.forEach((x) => {
-        if (x[1] >= 5) {
-            aprobados += `${x[0]} [${x[1]}]\n`;
-        }
-        else {
-            suspensos += `${x[0]} [${x[1]}]\n`;
-        }
-        ;
-    });
-    console.log(`${aprobados}${suspensos}`);
+//Dado un objeto, comprobar cuantos bucles posee (que al dibujarlo, genere x circulos):
+const main = (valor) => {
+    let cuentabucles = 0;
+    const listabucles = { 0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 1, 7: 0, 8: 2, 9: 1 };
+    valor.toString().split('').map((x) => { cuentabucles += listabucles[x]; });
+    console.log(`El valor introducido [${valor}] posee [${cuentabucles}] bucles`);
 };
-main([['Alfredo', 9], ['Arturo', 3], ['Soraya', 7], ['Eugenia', 6], ['Alberto', 9], ['Pepe', 2]]);
+main(888);
 //# sourceMappingURL=app.js.map
